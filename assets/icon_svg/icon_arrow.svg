@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.501" height="15.086" viewBox="0 0 21.501 15.086">
+  <g id="Icons_Arrow_Arrowhead_Right" data-name="Icons / Arrow / Arrowhead / Right" transform="translate(-326.992 -134.171)" style="isolation: isolate">
+    <path id="Path_199" data-name="Path 199" d="M343.706,141.131l-4.828-6a1,1,0,0,0-1.559,1.255l4.316,5.36-4.476,5.37A1,1,0,1,0,338.7,148.4l5-6a1,1,0,0,0,.011-1.267" transform="translate(4.566)" fill="#fff"/>
+    <path id="Path_200" data-name="Path 200" d="M329.444,135.131a1,1,0,0,0-1.559,1.255l4.315,5.36-4.475,5.37a1,1,0,1,0,1.536,1.281l5-6a1,1,0,0,0,.011-1.267Z" transform="translate(7 0)" fill="#fff" opacity="0.5"/>
+    <path id="Path_201" data-name="Path 201" d="M329.444,135.131a1,1,0,0,0-1.559,1.255l4.315,5.36-4.475,5.37a1,1,0,1,0,1.536,1.281l5-6a1,1,0,0,0,.011-1.267Z" transform="translate(0 0)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1" opacity="0.2"/>
+  </g>
+</svg>
