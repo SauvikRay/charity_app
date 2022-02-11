@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,14 +28,14 @@ class _FirstPageState extends State<FirstPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
                SizedBox(
-                height: 50.h,
+                height: 0.07.sw,
               ),
               //TODO: Creating Main Logo
               Stack(
                 alignment: Alignment.center,
                 children: [
                   Transform.rotate(
-                    angle: 40,
+                    angle: pi/4,
                     alignment: Alignment.center,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(30.r),
@@ -46,15 +48,15 @@ class _FirstPageState extends State<FirstPage> {
                   ),
                   SvgPicture.asset(
                     "assets/icon_svg/main_logo.svg",
-                    width: 160.w,
-                    height: 160.h,
+                    width: 0.4.sw,
+                    height: 0.4.sw,
                     fit: BoxFit.scaleDown,
                   ),
                 ],
               ),
               //TODO: Ending Main Logo
-              const SizedBox(
-                height: 20.0,
+               SizedBox(
+                height: 20.h,
               ),
               //TODO: Creating Text
               RichText(
@@ -76,113 +78,120 @@ class _FirstPageState extends State<FirstPage> {
                SizedBox(
                 height: 10.h,
               ),
-              Flexible(
-               fit:FlexFit.loose ,
-                child: Container(
-                  margin:
-                       EdgeInsets.symmetric(horizontal: 10.h, vertical: 10.h),
-                  height: 110.h,
-                 // color: Colors.white,
-                  child: Text(
-                    'You can get medical and food service at your doorsteps and also anyone can donate some fund for covid patients.',
-                    style: Theme.of(context).textTheme.subtitle1,
-                    textAlign: TextAlign.center,
-                  ),
+              Expanded(
+               //fit:Flex
+               //Fit.tight,
+                child: Text(
+                  'You can get medical and food service at your doorsteps and also anyone can donate some fund for covid patients.',
+                  style: Theme.of(context).textTheme.subtitle1,
+                  textAlign: TextAlign.center,
                 ),
               ),
             ],
           ),
         ),
-        // bottomNavigationBar: Container(
-        //   width: MediaQuery.of(context).size.width,
-        //   height: 200,
-        //   padding: const EdgeInsets.only(top: 10.0),
+        bottomNavigationBar: Container(
+          width: double.infinity,
+          height: 0.25.sh,
+          //padding:  EdgeInsets.only(top: 10.h),
 
-        //   // decoration:const BoxDecoration(
-        //   //   color: Colors.white,
-        //   //   borderRadius: BorderRadius.only(
-        //   //     topRight: Radius.circular(10.0),
-        //   //     topLeft: Radius.circular(10.0),
-        //   //   ),
-        //   // ),
-        //   decoration: const BoxDecoration(
-        //     color: Colors.white,
-        //     borderRadius: BorderRadius.only(
-        //       topLeft: Radius.circular(
-        //         30.0,
-        //       ),
-        //       topRight: Radius.circular(30.0),
-        //     ),
-        //   ),
-        //   child: Column(
-        //     children: <Widget>[
-        //       const Center(
-        //         child: Text(
-        //           'Choose your category',
-        //           style: TextStyle(
-        //               fontSize: 14.0,
-        //               fontFamily: 'Poppins',
-        //               fontWeight: FontWeight.w500,
-        //               color: Colors.black),
-        //         ),
-        //       ),
-        //       Row(
-        //         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        //         children: [
-        //           ClipRRect(
-        //             child: Material(
-        //               child: Column(
-        //                 children: [
-        //                   IconButton(
-        //                     onPressed: () {},
-        //                     icon: SvgPicture.asset(
-        //                       "assets/icon_svg/medicines.svg",
-        //                     ),
-        //                     iconSize: 80.0,
-        //                   ),
-        //                   const Text('Medical'),
-        //                 ],
-        //               ),
-        //             ),
-        //           ), ClipRRect(
-        //             child: Material(
-        //               child: Column(
-        //                 children: [
-        //                   IconButton(
-        //                     onPressed: () {},
-        //                     icon: SvgPicture.asset(
-        //                       "assets/icon_svg/hot-food.svg",
-        //                     ),
-        //                     iconSize: 80.0,
-        //                   ),
-        //                   const Text('Food'),
-        //                 ],
-        //               ),
-        //             ),
-        //           ), ClipRRect(
-        //             child: Material(
-        //               child: Column(
-        //                 children: [
-        //                   IconButton(
-        //                     onPressed: () {
-        //                      //Navigator.pushNamed(context,'/second');
+          // decoration:const BoxDecoration(
+          //   color: Colors.white,
+          //   borderRadius: BorderRadius.only(
+          //     topRight: Radius.circular(10.0),
+          //     topLeft: Radius.circular(10.0),
+          //   ),
+          // ),
+          decoration:  BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(
+                30.r,
+              ),
+              topRight: Radius.circular(30.0),
+            ),
+          ),
+          child: Column(
+            children: <Widget>[
+               Center(
+                child: Text(
+                  'Choose your category',
+                  style: TextStyle(
+                      fontSize: 16.sp,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Flexible(
+                    child: ClipRRect(
+                      child: Material(
+                        child: Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: SvgPicture.asset(
+                                "assets/icon_svg/medicines.svg",
+                                //fit: BoxFit.scaleDown,
+                                // height: 80.h,
+                                // width: 80.w,
+                              ),
+                              iconSize:0.23.sw,
                               
-        //                     },
-        //                     icon: SvgPicture.asset(
-        //                       "assets/icon_svg/giving.svg",
-        //                     ),
-        //                     iconSize: 80.0,
-        //                   ),
-        //                   const Text('Donate'),
-        //                 ],
-        //               ),
-        //             ),
-        //           ),
-        //         ],
-        //       ),
-        //     ],
-        //   ),
-        // ),
+                            ),
+                            const Text('Medical'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ), 
+                  Flexible(
+                    child: ClipRRect(
+                      child: Material(
+                        child: Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: SvgPicture.asset(
+                                "assets/icon_svg/hot-food.svg",
+                              ),
+                              iconSize: 0.23.sw,
+                            ),
+                            const Text('Food'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ), 
+                  Flexible(
+                    child: ClipRRect(
+                      child: Material(
+                        child: Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                               //Navigator.pushNamed(context,'/second');
+                                
+                              },
+                              icon: SvgPicture.asset(
+                                "assets/icon_svg/giving.svg",
+                              ),
+                              iconSize: 0.23.sw,
+                            ),
+                            const Text('Donate'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       
       ),
     );

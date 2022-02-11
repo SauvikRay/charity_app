@@ -22,11 +22,8 @@ class CustomTheme {
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
               subtitle1: TextStyle(
-                
                 fontSize: 20.sp,
-            
                 fontWeight: FontWeight.w100,
-              
                 color: Colors.white,
                 fontStyle: FontStyle.normal,
               ),
